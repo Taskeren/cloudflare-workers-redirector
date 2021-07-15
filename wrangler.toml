@@ -1,0 +1,9 @@
+name = "elytra-workers"
+type = "webpack"
+
+account_id = "e1a3a1c3e99eb0a30ea035ca798ad186"
+workers_dev = true
+
+[env.production]
+route = "elytra.cn/*"
+zone_id = "19ddfd3b1abb2b926ede16ae685dea15"
