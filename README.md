@@ -2,11 +2,21 @@
 
 A URL Shortener running on CloudFlare Workers.
 
+### Demo
+
+##### BuiltIn
+- [Repository (/)](https://elytra.cn)
+- [Mappings (/mappings)](https://elytra.cn/mappings)
+
+##### Mappings
+- [Mappings (/source)](https://elytra.cn/source)
+- [CurseForge Stoneblock 2 (/mc/modpack/stoneblock2)](https://elytra.cn/mc/modpack/stoneblock2)
+
 ### 配置与部署
 
 ##### 配置
 1. 先把本项目 clone 到你本地。
-1. 在 `index.js` 中找到 `gistUrl`，把他改成你的短网址映射表的地址。映射表应该是一个 JSON，其中 key 为路径（pathname），value 为目标网址。
+1. 在 `index.js` 中找到 `mappingsUrl`，把他改成你的短网址映射表的地址。映射表应该是一个 JSON，其中 key 为路径（pathname），value 为目标网址。
 1. 在 `index.js` 中找到 `builtIn`，把一些奇奇怪怪的内建映射表改掉。不想要可以直接留空。
 1. 配置结束，后面是部署。
 

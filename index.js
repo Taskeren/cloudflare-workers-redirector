@@ -1,15 +1,16 @@
-const gistUrl = "https://gist.githubusercontent.com/nitu2003/4b5f0c09b9de0fc882c614a1881c2715/raw/cf_worker_redirector.json"
+const mappingsUrl = "https://gist.githubusercontent.com/nitu2003/4b5f0c09b9de0fc882c614a1881c2715/raw/cf_worker_redirector.json"
 
 const builtIn = {
   // Homepage
-  "/": "https://github.com/nitu2003/cloudflare-workers-redirector"
+  "/": "https://github.com/nitu2003/cloudflare-workers-redirector",
+  "/mappings": mappingsUrl
 }
 
 async function handleRequest(request) {
   let url = new URL(request.url)
   let { pathname, search } = url
 
-  let gist = await fetch(gistUrl)
+  let gist = await fetch(mappingsUrl)
   let data = await gist.json()
 
   let table = {}
@@ -32,7 +33,7 @@ async function redirectOrThrow(requested, redirectMap, debugMode) {
   Resource ID:         ${requested}
   Resource Link:       ${url}
   Resource Table:      ${JSON.stringify(redirectMap)}
-  Resource Table Link: ${gistUrl}`
+  Resource Table Link: ${mappingsUrl}`
   if(debugMode) {
     return new Response(debugInfo)
   } else {
