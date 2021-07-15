@@ -2,7 +2,7 @@ const gistUrl = "https://gist.githubusercontent.com/nitu2003/4b5f0c09b9de0fc882c
 
 const builtIn = {
   // Homepage
-  "/": "https://gist.github.com/nitu2003/4b5f0c09b9de0fc882c614a1881c2715"
+  "/": "https://github.com/nitu2003/cloudflare-workers-redirector"
 }
 
 async function handleRequest(request) {
