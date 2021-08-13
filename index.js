@@ -1,8 +1,8 @@
-const mappingsUrl = "https://gist.githubusercontent.com/nitu2003/4b5f0c09b9de0fc882c614a1881c2715/raw/cf_worker_redirector.json"
+const mappingsUrl = "https://gist.githubusercontent.com/Taskeren/4b5f0c09b9de0fc882c614a1881c2715/raw/cf_worker_redirector.json"
 
 const builtIn = {
   // Homepage
-  "/": "https://github.com/nitu2003/cloudflare-workers-redirector",
+  "/": "https://github.com/Taskeren/cloudflare-workers-redirector",
   "/mappings": mappingsUrl
 }
 
